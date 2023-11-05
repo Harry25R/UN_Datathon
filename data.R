@@ -3,9 +3,9 @@ library(tidyverse)
 
 qsa.clean <- data.frame()
 my.col <- NULL
-# QLD 2009 - 2011
-for (idx in 9:11) {
-  if (idx == 9)
+# QLD 2008 - 2011
+for (idx in 8:11) {
+  if (idx <= 9)
     qsa <- read_xlsx(paste0("./NAPLAN_OUTCOMES_PER_SCHOOL/qsa_stats_naplan_0", idx, "_outcomes.xlsx"))
   else
     qsa <- read_xlsx(paste0("./NAPLAN_OUTCOMES_PER_SCHOOL/qsa_stats_naplan_", idx, "_outcomes.xlsx"))
