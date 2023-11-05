@@ -99,4 +99,8 @@ for (idx in 12:19) {
 # 
 final.qld <- rbind(qsa.clean, qcaa.clean)
 sum(is.na(final.qld$value))
+
+final.qld <- final.qld %>%
+  distinct(school, locality, Achievement, year, .keep_all = T)
 saveRDS(final.qld, "final.qld.rds")
+
